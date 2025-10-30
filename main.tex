@@ -1,0 +1,123 @@
+% Steven Milan Moreno
+% Thesis Version 1.0.0
+% April 18th, 2024 (1.0.0)
+% May 13th, 2024 (1.0.1)
+% March 1st, 2025 (1.1.2)
+% May 23rd, 2025 (1.1.3)
+% July 7th, 2025 (1.1.4)
+% July 14th, 2025 (1.1.5) CH2_DFT1_Complete 
+% August 5th, 2025 (1.1.6)
+% August 20th, 2025 (1.2.7) CH3_DFT1_Complete, CH2_DFT2(FB)_Complete
+% September 1st, 2025 (1.2.8) CH1_DFT1_Complete
+% September 9th, 2025 (1.2.9) CH6-7_DFT1_Complete
+% September 16th, 2025 (1.2.10) CH4,5_Updated_Significantly
+% September 29th, 2025 (1.3.11) CH1-5(FB) Complete
+% October 6th, 2025 (1.3.12) CH4-6_Updated_Significantly
+% October 14th, 2025 (1.4.12) TEXT COMPLETE
+% October 20th, 2025 (1.4.13) Feedback Implemented
+% Octover 25th, 2025 (1.5.14) Heavy Restrcuturing of Intro, Feedback Implemented
+% October 28th, 2025 (2.0.0) Completed Restructuring of Into/End of All Chapters, Conclusion Modified
+
+
+%Outline format based on template shared by John Davies <john.davies@glasgow.ac.uk> 2017-02-06
+% It matches the university specification at the time of writing
+
+%VerA.B.C
+%A = Updated Entire/ Nearly Entire Draft After Feedback (Inner-Chapter Alterations) = +1
+%B = Updated Section/Chapter After Feedback (Intra-Chapter Alteration)= +1
+%C = Added 1st Draft Content, Minor Updates = +1
+
+\documentclass[12pt,titlepage,oneside]{book}
+\usepackage[T1]{fontenc} % modern encoding
+% Comment out the next three lines of LaTeX if you wish to use Computer Modern fonts
+%   (this is the default for LaTeX, easier for mathematics heavy papers)
+\usepackage{float}
+\usepackage{mathptmx}  
+\usepackage[scaled]{helvet} 
+\usepackage{courier} 
+\usepackage{subcaption}
+\usepackage[labelfont=bf]{caption}
+\usepackage[font=small,labelfont=bf,margin=\parindent,tableposition=top]{caption}
+\usepackage{graphicx}  
+\usepackage{cite}  
+\usepackage[top=1.8cm, bottom=1.8cm,left=4.0cm,right=1.5cm]{geometry}
+\usepackage[onehalfspacing]{setspace} 
+\usepackage{tikz}
+\usepackage{gensymb}
+\usepackage{lscape} 
+\usepackage{pgfplots}
+\usepackage{tikzviolinplots}
+\usepackage{filecontents}
+\usepackage{datatool}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+
+
+\usetikzlibrary{shapes, arrows}
+\pgfplotsset{compat=1.18}
+\pgfplotsset{empty line = none}
+\usepgfplotslibrary{statistics}
+%\usepgfplotslibrary{external} 
+%\tikzexternalize
+
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{3cm}  % Need the * or the space is swallowed at the top of the page
+\bfseries\Large
+Optimized Pipeline For Clearing, Mounting, and Mesoscale Imaging of Leporine Cardiac Tissue Structure\\
+
+
+\vspace{1.5cm}
+**COMPLETE DRAFT**\\
+Version 1.4.12\\
+\vspace{1.5cm}
+\normalfont\large
+Steven Milan Moreno\\
+\vspace{2cm}
+Submitted in fulfilment of the requirements for the\\
+Degree of Doctor of Philosophy\\
+\vspace{2cm}
+School of Physics and Astronomy\\
+College of Science and Engineering\\
+University of Glasgow\\
+\vspace{1cm}
+\includegraphics[scale=0.125]{Figures/logo_glasgow.jpg}
+\\
+\vspace{0.125cm}
+% Insert month and year of date deposited with library for final version
+Winter 2025-6 (ETA)
+\end{titlepage}
+\frontmatter  % Turn off chapter numbering, use roman page numbers
+\include{abstract}
+\tableofcontents
+\listoftables
+\listoffigures
+\include{acronyms}
+\include{acknowledgements}
+\include{declaration}
+
+\mainmatter % Turn on chapter numbering, reset page numbers, use arabic
+\include{introduction}
+\include{methodology}
+
+\include{results1}
+\include{results2}
+\include{results3}
+\include{discussion}
+\include{conclusion}
+% and the other chapters
+\appendix
+\include{appendix1}
+%\include{appendix2}
+\include{appendix3}
+\include{appendix4}
+\include{appendix5}
+\backmatter  % Turn off chapter numbering
+% I assume that the bibliography is assembled by hand.
+% Change the file if you use bibtex or something like that.
+\include{bibliography}
+
+\end{document}

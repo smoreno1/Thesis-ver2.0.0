@@ -1,0 +1,1061 @@
+\chapter{Tables and Graphs}
+\section{Tables}
+\begin{table} [ht]
+    \centering
+    
+    \begin{tabular}{cccc}
+            \textbf{Laser Line} & \textbf{Wavelength} & \textbf{Documented Max Power}\\
+            LuxX CW Diode Laser 647& 647nm & 140mW\\
+            OBIS LS Laser 532 & 532nm & 120mW\\
+            LuxX CW Diode Laser 488 & 488nm & 100mW\\
+            LuxX CW Diode Laser 405&  405nm & 120mW\\
+    \end{tabular}
+    \medskip
+    \caption{\textbf{Laser Lines Installed in LightHUB Ultra\textsuperscript{\textregistered} Laser Engine}}
+    \label{tab:my_label}
+\end{table}
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{cc}
+        \textbf{Procedure Step} & \textbf{Time Duration}\\
+            \medskip
+         1. PBS Washing & 3 Hours\\
+             \medskip
+         2. PBS-T Washing & 24 Hours\\
+            \medskip
+         3*. 1:200 Anti-TH Antibody Wash in PBS-T at $4\celsius$ & 72 Hours\\
+            \medskip
+         4. 1:100 WGA/AF-488 Conjugate Stain Wash & 48 Hours\\
+            \medskip
+         5*. 1:200 Goat anti-mouse AF 647 Secondary Antibody Wash in PBS-T & 48 Hours\\
+            \medskip
+         6. 1:1000 DAPI Nuclear Stain Wash in PBS-T & 6 Hours**\\
+            \medskip
+         6. PBS-T Wash (3x) & 8 Hours (x3)\\
+            \medskip
+         7. PFA/PBS Wash & 15 Min\\
+            \medskip
+         8. PBS Washes (x3) & 5 Min (3x)\\
+            \medskip
+    \end{tabular}
+    \medskip
+    \caption{\textbf{Finalized Antibody/WGA Conjugate Dual Staining Protocol For CLARITY Cleared Tissue Slices.} All Steps Performed with Gentle Stirring at Room Temperature Unless Otherwise Stated.*Antibody staining steps skipped if DAPI utilized. **DAPI can be added to last 6 hours of prior washing step, step skipped if antibody staining performed.}
+    \label{tab:placeholder}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabular}{cc}
+        \textbf{Procedure Step} & \textbf{Time Duration}\\
+            \medskip
+         1. PBS Washing & 3 Hours\\
+             \medskip
+         2. PBS-T Wash (3x) & 8 Hours (x3)\\
+            \medskip
+         3. WGA Conjugate*, Nuclear** Stains Multiple Stain Wash & 132 Hours\\
+            \medskip
+         4. Continue Multiple Stain Wash at $4\celsius$ & 12 Hours\\
+            \medskip
+         5. PBS-T Wash (3x) at $4\celsius$ & 8 Hours (x3)\\
+            \medskip
+         6. PFA/PBS Wash at $4\celsius$ & 24 Hours\\
+            \medskip
+         7. PBS Washes (x3) & 2 Hours (3x)\\
+            \medskip
+         8. Incubation In 50\% CUBIC-RA Aqueous Solution & 12 Hours\\
+            \medskip
+         9. Incubation In 100\% CUBIC-RA Solution & $\geq 96$ Hours\\
+            \medskip
+    \end{tabular}
+    \medskip
+    \caption{\textbf{Finalized DAPI/Nuclear/WGA Conjugate Triple Staining Protocol For CUBIC-L/RA  Cleared LV Sections.} *Compatible WGA Conjugates (1:100): WGA/AF-488, WGA/AF-555, WGA/AF-647. **Compatible Nuclear Stains: SYTOX GREEN (1:2500), PI (3:400), DAPI (1:1000). All Steps Performed with Gentle Stirring at Room Temperature Unless Otherwise Stated. DAPI staining can be omitted to make double staining protocol without change to steps or time duration.}
+    \label{tab:placeholder}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+         \empty & Left Side of LV Wall & Right Side of LV Wall \\
+         \medskip
+         \empty & WGA-AF 647/SYTOX Green & WGA-AF 488/ PI\\
+         \medskip
+        Percutaneous Sham & AE0D P Sham L & AE0D P Sham R\\
+         \medskip
+        Percutaneous MI & 2265 P MI L & 2265 P MI R\\
+         \medskip
+        Thoracotomy Sham & 38E2 T Sham L & 38E2 T Sham R\\
+         \medskip
+        Thoracotomy MI & 37D9 T MI L & 37D9 T MI R\\
+         \medskip
+    \end{tabular}
+
+    \caption{\textbf{LV Tissue Section Series Imaged Via Imaging Pipeline.} Specific leporine models indicated by unique 4 character alphanumeric code. Code combined with abbreviations as convention for sample naming (P = Percutaneous, T = Thoracotomy, L = Left, R = Right, MI = Scarred Tissue, Sham = Healthy Control Tissue).}
+    \label{tab:placeholder}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+         Sample Name & Cell Membrane Stain & Cell Nuclei Stain \\
+         \medskip
+         \empty & WGA Conjugate Dyes & Nucleic Acid Dyes\\
+         \medskip
+        HiPSC 4.2 & AF-647 & SYTOX Green\\
+         \medskip
+        H9C2 5.1 & AF-647 & SYTOX Green\\
+         \medskip
+        H9C2 5.2 & AF-647 & SYTOX Green\\
+         \medskip
+        H9C2 5.3 & AF-555 & SYTOX Green\\
+    \end{tabular}
+    
+    \caption{\textbf{Spheroid injected sample tissue staining, naming conventions.}}
+    \label{tab:placeholder}
+\end{table}
+
+
+
+
+
+\section{Graphs}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+       
+        [
+        scale = 1,
+        ytick={1,2,3},
+        yticklabels={Overall,Healthy, Scar},
+        boxplot/box extend=0.25,
+        ]
+
+\addplot+ [
+        boxplot prepared={draw position=1,
+          median=1.97,
+          upper quartile=2.72,
+          lower quartile=1.71,
+          upper whisker=3.42,
+          lower whisker=1.43},
+        ] table [y index=0] {Data/Figure3.3.dat}
+        [above]
+        node at
+          (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+          {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+        node at
+          (boxplot box cs: \boxplotvalue{median},1)
+          {\pgfmathprintnumber{\boxplotvalue{median}}}
+        node at
+          (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+          {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+        ;
+        
+\addplot+[
+        boxplot prepared={ draw position=2,
+          median=1.98,
+          upper quartile=2.03,
+          lower quartile=1.67,
+          upper whisker=2.03,
+          lower whisker=1.67},
+        ] table [y index=1] {Data/Figure3.3.dat}
+        [above]
+        node at
+          (boxplot whisker cs:\boxplotvalue{lower whisker},1.2)
+          {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+        node at
+          (boxplot box cs: \boxplotvalue{median},-2)
+          {\pgfmathprintnumber{\boxplotvalue{median}}}
+        node at
+          (boxplot whisker cs:\boxplotvalue{upper whisker},1.2)
+          {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+        ;
+\addplot+[
+        boxplot prepared={draw position=3,
+          median=1.96,
+          upper quartile=3.18,
+          lower quartile=1.62,
+          upper whisker=3.42,
+          lower whisker=1.43}
+        ] table [y index=2] {Data/Figure3.3.dat}
+        [above]
+        node at
+          (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+          {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+        node at
+          (boxplot box cs: \boxplotvalue{median},1)
+          {\pgfmathprintnumber{\boxplotvalue{median}}}
+        node at
+          (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+          {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+        ;
+        
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Surface Area Expansion Coefficient of 500um CLARITY Cleared Tissue Slices.} Median, Upper and Lower Quartiles, Max and Min Extrema Shown (N,overall = 8, n,scar = 5, n,healthy = 3)}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+        [
+        scale = 1,
+        ytick={1,2,3},
+        yticklabels={Overall,Healthy, Scar},
+        boxplot/box extend=0.25,
+        ]
+
+\addplot+[boxplot] 
+            table [y index=0] {Data/CUBIC_Overall.tex}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+        
+        
+\addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/CUBIC_Healthy.tex}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+        
+\addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/CUBIC_Scar.tex}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+        
+        
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Axial Width Expansion Coefficient of CUBIC Cleared LV Sections.} Median, Upper and Lower Quartiles, Max and Min Extrema Shown (N, overall = 8; n, scar = 4, n; healthy = 4). Data outliers shown as individual data points}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.9\textwidth}
+    \centering
+    \begin{tikzpicture}
+    
+    \begin{axis}[
+            ymajorgrids,
+            xmajorgrids,
+            scale= 1.2,
+            width = 12cm,
+            height = 7cm,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            xmin = 390, xmax = 660,
+            ymin = -10, ymax = 105,
+            legend style={at={(0.7,0.2)}, 
+            anchor=north}
+            ]
+        \addplot+[
+            const plot,
+            color=blue,
+            mark=square,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [ x index=0, y index=3]{Data/400um_UNCLEARED_2.dat};%400um_CLARITY_UNCLEARED_TRANSMISSION.dat};
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=2] {Data/400um_CLEARED_2.dat};%CLARITY_Transmission.dat};
+        \legend{0.4 mm Uncleared, 0.4mm Cleared}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted 0.4mm CLARITY Sliced Samples.} Light Transmittance Normalized to Control 400um Mount Filled with EI Solution.}    
+    \label{fig:enter-label}
+    \end{subfigure}
+    \medskip
+    
+    \begin{subfigure}[t]{0.9\textwidth}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            ymajorgrids,
+            xmajorgrids,
+            scale= 1.2,
+            width = 12cm,
+            height = 7cm,
+            xlabel={Wavelength (nm)},
+            ylabel={Transmission (\%)},
+            xmin = 390, xmax = 660,
+            ymin = -10, ymax = 105,
+            legend style={at={(0.725,0.2)}, 
+            anchor=north}
+            ]
+        \addplot+[
+            const plot,
+            color=blue,
+            mark=square,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [ x index=0, y index=3] {Data/2mm_CLARITY_UNCLEARED_TRANSMISSION.dat};
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=2] {Data/2mm_CLARITY_TRANSMISSION.dat};
+        \legend{2 mm Uncleared, 2 mm Cleared}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted 2.0mm CLARITY Sliced Samples.} Light Transmittance Normalized to Control 2mm Mount Filled with EI Solution.}    
+    \label{fig:enter-label}
+    \end{subfigure}
+    \medskip
+    
+    \caption{\textbf{Comparison of Percent Light Transmission of Mounted Cleared and Uncleared Sliced Cardiac Tissue Samples.}  HORIBA Duetta \% Transmittance Accuracy: $\pm$ 4.5\%, Wavelength Emission Accuracy: $\pm$ 1nm []. }    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            ymajorgrids,
+            xmajorgrids,
+            xmin = 395, xmax = 655,
+            ymin = 85, ymax = 100.25,
+            scale= 1.2,
+            width = 12cm,
+            height = 7cm,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            legend style={at={(0.8,0.2)}, 
+            anchor=north}
+            ]
+        
+        \addplot+[
+            color=orange,
+            mark=diamond,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=2] {Data/400um_CLARITY_Transmission.dat};
+        %\addplot+[
+            %color=green,
+            %mark=square,
+            %mark size = 3pt,
+            %error bars/.cd,
+               %x dir=both, x fixed = 1,
+               %y dir=both, y fixed = 4.5
+            %]
+            %table [x index=0, y index=1]{Data/1mm_Cleared_2.dat};
+        \addplot+[
+            color=blue,
+            mark=x,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=2] {Data/2mm_CLARITY_Transmission.dat};
+            \legend{0.4mm, 2.0mm}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted 0.4 and 2.0 mm CLARITY Cleared, Unstained Sliced Samples.}Tissue Sample Light Transmittance Normalized to Respective Thickness Control Mounts Filled with EI Solution. HORIBA Duetta \% Transmittance Accuracy: $\pm$ 4.5\%, Wavelength Emission Accuracy: $\pm$ 1nm [].}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            ymajorgrids,
+            xmajorgrids,
+            scale= 1.2,
+            width = 12cm,
+            height = 7cm,
+            xmin = 390, xmax = 660,
+            ymin = 92.5, ymax = 100.25,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            legend style={at={(0.8,0.5)}, 
+            anchor=north}
+            ]
+        
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt,
+            %error bars/.cd,
+                %x dir=both, x fixed = 1,
+                %y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=1] {Data/0.5mmBlankData.dat};
+        \addplot+[
+            color=green,
+            mark=square,
+            mark size = 3pt,
+            %error bars/.cd,
+                %x dir=both, x fixed = 1,
+                %y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=1] 
+            {Data/1mmBlankData.dat};
+        \addplot+[
+            color=blue,
+            mark=x,
+            mark size = 5pt,
+            %error bars/.cd,
+                %x dir=both, x fixed = 1,
+                %y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=1] 
+            {Data/2mmBlankData.dat};
+            \legend{0.5mm, 1.0mm, 2.0mm}
+        \end{axis}
+
+        
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted Control Samples Filled with EI Solution.} Control Light Transmittance Normalized to Control 0.4mm Mount Filled with EI Solution.HORIBA Duetta \% Transmittance Accuracy: $\pm$ 4.5\%, Wavelength Emission Accuracy: $\pm$ 1nm [].}
+    \label{fig:enter-label}
+\end{figure}
+
+[FIGURE 3.10 HERE]
+
+[FIGURE 4.8 HERE]
+
+\begin{figure}[H]
+\centering
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}
+            [
+            scale = 1,
+            xmin = 2,
+            xmax = 13,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'}, 
+            boxplot/box extend=0.25,
+            ]
+    
+    \addplot+ [boxplot] 
+            table [y index=0] {Data/B4_2/2zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_2/2yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_2/2xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            [
+                       
+            \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{Agarose Bead Mount \#1 (n=xxx)}}
+    \end{subfigure}
+    \medskip
+    ~
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+             \begin{axis}
+            [
+            scale = 1,
+            xmin = 2,
+            xmax = 13,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            ]
+    
+    \addplot+ [boxplot] 
+            table [y index=0] {Data/B4_3/3zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_3/3yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_3/3xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            [
+                       
+            \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{Agarose Bead Mount \#2 (n=xxx)}}
+    \end{subfigure}
+    \medskip
+    
+\begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}
+            [
+            scale = 1,
+            xmin = 2,
+            xmax = 13,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            ]
+    
+    \addplot+ [boxplot] 
+            table [y index=0] {Data/B4_4/4zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_4/4yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_4/4xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            [
+                       
+            \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{Agarose Bead Mount \#3 (n=xxx)}}
+    \end{subfigure}
+    \medskip
+    ~
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+             \begin{axis}
+             [
+            scale = 1,
+            xmin = 2,
+            xmax = 13,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            ]
+    
+    \addplot+ [boxplot] 
+            table [y index=0] {Data/B4_5/5zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_5/5yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot] 
+            table [y index=0] {Data/B4_5/5xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            [
+                       
+            \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{Agarose Bead Mount \#4 (n=xxx)}}
+    \end{subfigure}
+    \caption{\textbf{Agarose Bead Samples Point Spread Analysis: 4 Custom 3D Printed Mounts, No Shear Technique} Box plots of full width at half maximum (FWHM) results in x',y, and z' sample coordinate axes. Median, Upper and Lower Quartiles, Max and Min Extrema Shown (N,overall = XXX Beads)}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H] 
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+        \begin{tikzpicture}
+            \begin{axis}
+             [
+            scale = 1,
+            xmin = 2,
+            xmax = 15.5,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            ]
+
+            \addplot+ [boxplot] 
+                    table [y index=0] {Data/double/zfwhm.txt}
+                    [above]
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                    node at
+                      (boxplot box cs: \boxplotvalue{median},-1)
+                      {\pgfmathprintnumber{\boxplotvalue{median}}}
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                    ;
+                    
+            \addplot+[boxplot] 
+                    table [y index=0] {Data/double/yfwhm.txt}
+                    [above]
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                    node at
+                      (boxplot box cs: \boxplotvalue{median},1)
+                      {\pgfmathprintnumber{\boxplotvalue{median}}}
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                    ;
+                    
+            \addplot+[boxplot] 
+                    table [y index=0] {Data/double/xfwhm.txt}
+                    [above]
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                    node at
+                      (boxplot box cs: \boxplotvalue{median},-1)
+                      {\pgfmathprintnumber{\boxplotvalue{median}}}
+                    node at
+                      (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+                      {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                    ;
+            [
+                       
+            \end{axis}
+        \end{tikzpicture}
+    \caption{\textbf{Averaged Point Spread Analysis: Custom 3D Printed Mount, Shear Technique} Box plots of Average FWHM in examined agarose bead samples (m = 4).}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+            \begin{tikzpicture}
+                 \begin{axis}
+                 [
+                scale = 1,
+                xmin = 2,
+                xmax = 15.5,
+                ytick={1,2,3},
+                yticklabels={Z',Y, X'},
+                boxplot/box extend=0.25,
+                ]
+        
+        \addplot+ [boxplot] 
+                table [y index=0] {Data/double/nzfwhm.txt}
+                [above]
+                node at
+                  (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+                  {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                node at
+                  (boxplot box cs: \boxplotvalue{median},-1)
+                  {\pgfmathprintnumber{\boxplotvalue{median}}}
+                node at
+                  (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+                  {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                ;
+                
+        \addplot+[boxplot] 
+                table [y index=0] {Data/double/nyfwhm.txt}
+                [above]
+                node at
+                  (boxplot box cs:\boxplotvalue{lower whisker},0.9)
+                  {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                node at
+                  (boxplot box cs: \boxplotvalue{median},-1)
+                  {\pgfmathprintnumber{\boxplotvalue{median}}}
+                node at
+                  (boxplot box cs:\boxplotvalue{upper whisker},1)
+                  {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                ;
+                
+        \addplot+[boxplot] 
+                table [y index=0] {Data/double/nxfwhm.txt}
+                [above]
+                node at
+                  (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+                  {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+                node at
+                  (boxplot box cs: \boxplotvalue{median},-1)
+                  {\pgfmathprintnumber{\boxplotvalue{median}}}
+                node at
+                  (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+                  {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+                ;
+                [      
+                \end{axis}
+            \end{tikzpicture}
+    \caption{\textbf{Averaged Point Spread Analysis: Custom 3D Printed Mount, No Shear Technique} Box plots of Average FWHM in examined agarose bead samples (m = 4).}
+    \end{subfigure}
+
+    \label{fig:enter-label}
+    \caption{\textbf{Point Spread Analysis Comparison: Shear and No Shear Techniques.} 1 micron florescent beads in agarose solution examined in recordings: Shear Recording (n = 1182 beads), No Shear Recording (n = 5470 beads).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture}
+                \begin{axis}
+                [
+                scale = 0.85,
+                xlabel = Raw Data File Size (GB),
+                ylabel = Processed Data File Size (GB),
+                xmin = 0,
+                xmax = 18,
+                ymax= 40,
+                ymin = 0
+                ]
+                \addplot table {Data/Noshearfilesize.tex}
+                ;
+                \addplot table {Data/Shearfilesize.tex}
+                        ; 
+                \end{axis}
+            \end{tikzpicture}
+        \caption{\textbf{Change in file size of data after image processing}.}
+        \label{fig:enter-label}
+        \end{subfigure}
+        \hspace{2em}
+        ~
+        \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+         \begin{tikzpicture}
+                \begin{axis}
+                [
+                scale = 0.85,
+                xlabel = Input File Size (GB),
+                ylabel = Processing Time (s),
+                xmin = 0,
+                xmax = 14,
+                ymax= 300,
+                ymin = 0
+                ]
+                \addplot table {Data/NoShearTime.tex}
+                ;
+                \addplot table {Data/ShearTime.tex}
+                ; 
+                \end{axis}
+            \end{tikzpicture}
+        \caption{\textbf{Change in affine transform processing time to input file size}.}
+        \label{fig:enter-label}
+        \end{subfigure}
+    \caption{\textbf{Comparison of Data Processing Files Size and Processing Times}. Blue lines indicate trend for No Shear data, red lines indicates trend for Shear data.}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}
+            [
+            scale = 1,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            xmax = 25,
+            xlabel = {Length ($\mu$m)}
+            ]
+    
+   \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI1/zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI1/yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+   \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI1/xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            \end{axis}
+ 
+        \end{tikzpicture}
+        \caption{\textbf{ROI 1 (n=43)}}
+    \end{subfigure}
+    \medskip
+    ~
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+           \begin{axis}
+            [
+            scale = 1,
+            ytick={1,2,3},
+            yticklabels={Z',Y, X'},
+            boxplot/box extend=0.25,
+            xmax = 25,
+            xlabel = {Length ($\mu$m)}
+            ]
+    
+   \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI2/zfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+    \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI2/yfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+   \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI2/xfwhm.txt}
+            [above]
+            node at
+              (boxplot whisker cs:\boxplotvalue{lower whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{lower whisker}}}
+            node at
+              (boxplot box cs: \boxplotvalue{median},-1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            node at
+              (boxplot whisker cs:\boxplotvalue{upper whisker},1)
+              {\pgfmathprintnumber{\boxplotvalue{upper whisker}}}
+            ;
+            
+            \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{ROI 2 (n=133)}}
+    \end{subfigure}
+    \caption{\textbf{Distribution of cell nuclei dimensional measurements.} Median, upper and lower quartiles, max and min extrema shown. Measurements recorded in sample coordinate system (x', y, z').}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}
+            [
+            scale = 1,
+            ytick={1,2,3},
+            yticklabels={$Z'_{ROI_2}$,$Z'_{ROI_1}$,\empty},
+            boxplot/box extend=0.25,
+            xmin= 6,
+            xmax = 18, 
+            ymin = 0,
+            ymax=3,
+            xlabel = {Length ($\mu$m)}
+            ]
+    
+     \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI2/zfwhm.txt}
+            [above]
+            node at
+              (boxplot box cs: \boxplotvalue{median},1.1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            ;
+    \addplot+ [boxplot prepared={lower whisker=13.23, upper whisker=13.23,whisker extend = 4,draw position=1,every whisker/.style={magenta,ultra thick}}] 
+                %table [y index=0] {Data/double/zfwhm.txt}
+                coordinates {};
+                    %;
+    \addplot+ [boxplot prepared={lower whisker=7.76, upper whisker=7.76,whisker extend = 4,draw position=1,every whisker/.style={cyan,ultra thick}}]
+                %table [y index=0] {Data/double/zfwhm.txt}
+                coordinates {};
+                    %;
+    \addplot+[boxplot, mark=none] 
+            table [y index=0] {Data/ROI1/zfwhm.txt}
+            [above]
+            node at
+              (boxplot box cs: \boxplotvalue{median},1.1)
+              {\pgfmathprintnumber{\boxplotvalue{median}}}
+            ;
+              \end{axis}
+        \end{tikzpicture}
+        \caption{\textbf{FWHM distribution of cell nuclei axial measurements in ROIs (Fig. 5.1(a-b)).} (N, ROI \#1 = 27 nuclei; N, ROI \#2 = 132 nuclei)  Median axial measurement, inner quartiles, minimum and maximum values are shown. magenta line = shear imaging method axial resolution limit (13.23 microns). Cyan line = no shear method axial resolution limit (7.76 microns).}
+    \end{figure}

@@ -1,0 +1,247 @@
+%%Subfigures FOR PLT of CLARITY
+
+\begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            scale= 0.8,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            ]
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=1] {Data/SpectrometerData1.dat};
+        \addplot+[
+            color=black,
+            mark=x,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=9] {Data/SpectrometerData1.dat};
+            \legend{}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted 0.5 mm CLARITY Cleared Sliced Samples.}}
+    \label{fig:enter-label}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            scale= 0.8,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)}
+            ]
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=1] {Data/SpectrometerData1.dat};
+        \addplot+[
+            color=black,
+            mark=x,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+            ]
+            table [x index=0, y index=9] {Data/SpectrometerData1.dat};
+            \legend{}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Percent Light Transmission of Mounted 1.0 mm CLARITY Cleared Sliced Samples.}}
+    \label{fig:enter-label}
+    \end{subfigure}
+
+%% Figures and Text for TDE, NO EI Analysis (Not usefull)
+
+\textit{A single 1mm cleared tissue slice was also mounted as previously described but was not subsequently immersed in RI matching solution and left in open air inside the spacer mount for 1 day prior to data acquisition. MAY BE OMITTED, TBD}
+
+\textit{An additional X.X mm blank sample was also created but instead filled with XX\% TDE RIMS solution. Comparison of the light transmittance across the EasyIndex and TDE blanks will confirm that a match in transmittance exists between the two and any light dispersion that occurs between the two will have only a negligible impact during image acquisition. MAY BE OMITTED, TBD}
+
+    
+\textit{Light Transmission of a single sample before and after immersion in EasyIndex Solution was also examined and plotted relative to light wavelength range examined. The results seen in Figure 3.5 shows the improvement in light transmittance achieved through immersion in RI matching solution for the period used in imaging pipeline.}[MAY BE OMITTED, TBD]
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            scale = 2,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            legend style={at={(0.8,0.2)}, 
+            anchor=north}]
+       \addplot+[
+            smooth,
+            color=black,
+            solid,
+            mark=x,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+                ]
+             table [x index=0, y index=1] {Data/SpectrometerData1.dat};
+        \addplot+[
+            color=blue,
+            mark=x,
+            mark size = 5pt,
+            error bars/.cd,
+                x dir=both, x fixed = 1,
+                y dir=both, y fixed = 4.5
+                ]
+            table [x index=0, y index=9] {Data/SpectrometerData1.dat};
+        \legend{With RIMS, Without RIMS}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textit{\textbf{Percent Light Transmission of CLARITY Sliced Tissues With and Without EasyIndex Solution Immersion.} HORIBA Duetta \% Transmittance Accuracy $\pm$ 4.5\%, Wavelength Emission Accuracy $\pm$ 1nm []. [\textbf{MAY BE OMITTED, TBD}]}}
+    \label{fig:enter-label}
+\end{figure}
+
+\textit{The spectrometer recording of TDE filled blank mount is shown in Figure 3.x and was normalized against the EasyIndex filled blank mount of idenitcal thickness. As a result of this normalization using a different chemical solution instead of a control sample, the transmittance of light is capable of exceeding 100\% in the light transmittance recording generated. Where this occurs in indicative of wavelengths ranges where the TDE solution exceeds the EasyIndex solution's ability to transmit light. Conversely regions where the recording is less than 100\% indicates wavelengths ranges where the EI solution is superior.[MAY BE OMITTED,TBD]}
+
+[INSERT TDE PLOT FIGURE HERE]
+
+
+%% SCRAPPED FROM CHAPTER 3
+
+\subsection{Analysis of Tissue Staining}
+\paragraph{Comparison of CLARITY and CUBIC-L/RA Staining}
+
+\textbf{[MAY BE TRANSFERRED TO CHAPTER 5/6]}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{\textbf{XXXX x XXXX pixel ROI of Epicardium in CLARITY Cleared Cardiac Tissue Slice}}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            scale=0.6,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            legend style={at={(2,0.5)}, 
+            anchor=north}
+            ]
+        
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt]
+            table [x index=0, y index=1] {Data/SpectrometerData1.dat};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Pixel Signal Intensity Across Z-Axis of Selected ROI in Figure 3.9(a)}}
+    \label{fig:enter-label}
+    \end{subfigure}
+    \medskip
+    
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{\textbf{XXXX x XXXX pixel ROI of Epicardium in CUBIC Cleared Left Ventricle Section}}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+            scale=0.6,
+            ylabel={Transmission (\%)},
+            xlabel={Wavelength (nm)},
+            legend style={at={(2,0.5)}, 
+            anchor=north}
+            ]
+        
+        \addplot+[
+            color=red,
+            mark=o,
+            mark size = 3pt]
+            table [x index=0, y index=1] {Data/SpectrometerData1.dat};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\textbf{Average Pixel Signal Intensity Across Z-Axis of Selected ROI in Figure 3.9(c)}}
+    \label{fig:enter-label}
+    \end{subfigure}
+    \medskip
+
+\caption{\textbf{Comparison of WGA-AF 488 Signal Intensity Across CLARITY and CUBIC-L/RA Cleared Tissue Samples Volumes.} . [\textbf{DATA NOT FINAL, PLACEHOLDER IN USE}]}
+\label{fig:enter-label}
+\end{figure}
+
+[PERIMETER EXPANSION SECTION]
+
+Due to the transparent appearance of the tissue and small amounts of PBS that pool around samples, some tissue edges seen in photos are harder to discern and can be viewed as being in different locations by different viewers. To mitigate the effect of this bias when measuring surface areas, all custom ROI were drawn by the same person (myself). This evenly distributes the amounts of bias in measurements across all images, improving the precision of the analysis. Accuracy of measurements would still be affected but it was determined the effect ROI bias had on changing the calculated surface area was confirmed to be only in the range of dozens of pixels and thus could be ignored.
+
+\begin{figure}[H]
+    \centering
+    
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{ROI of tissue recorded for Surface Area calculation extracted from ZIP file}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{Lines traced over the minimum portion of ROI located at Epicardium}
+    \end{subfigure}
+    \medskip
+
+    \begin{subfigure}[c]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{Line distance measured, recorded using ROI manager}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[d]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{Steps a-c repeated for minimum portion of ROI located at Endocardium}
+    \end{subfigure}
+    \
+
+    \begin{subfigure}[c]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{Steps a-d repeated for the maximum portion of ROI located at Epicardium and Endocardium}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[d]{0.475\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Placeholder.png}
+    \caption{All Lines Drawn per Tissue saved as ROI set in ZIP file}
+    \end{subfigure}
+    \medskip  
+    
+    \caption{\textbf{Epicardium/Endocardium Perimeter Expansion Coefficient ImageJ Measurement Protocol}}
+    \label{fig:enter-label}
+\end{figure}
+
+Perimeter measurements for the Epicardium and Endocardium of cleared samples are subject to far greater bias as a result of the boundaries marking the start and end of these regions in the tissue perimeter is highly disputable. The endocardium poses an additional challenge due to the uneven and jagged shape the structure takes in both pre and post clearing images making discernment of end points at times unclear. 
+
+To mitigate this bias, the custom ROIs drawn for the surface area calculations are used as a basis from which perimeter lines are drawn from.In addition, two measurements each were taken for the perimeter sections of both the epicardium and endocardium. The first measurement recorded what is believed to be the shortest possible length each section could be while the second measurement records what is believed to be the longest. The average distance between these two extremes is recorded and used in calculation of the average epicardium and endocardium perimeter expansion coefficient. 
+
+[SCRAP INTRO INFO]
+
+In the field of human health and wellbeing, a scientifically holistic approach is required to gain a proper understanding of the interconnected, syncretic series of mechanical, electrical, and chemical systems which make up the living body. Physics, biology, chemistry, and engineering are all utilized not only to understand how systems function as intended, but how this function changes as problems over time develop. This information is crucial to obtain as it will guide researchers and medical professionals in their decisions as to what measures are needed to return bodily operations back to a normal, homeostatic condition. 
+
+With the stated importance of cross-disciplinary collaboration in mind, the remainder of this introductory chapter is set up to provide an overview of the biology, chemistry, engineering, and optical physics based concepts that were applied throughout the course of this project. This conceptual information ensures a familiarity of concepts in each of these field that the rationale for the conduct of this study is built upon. \textbf{ (MAY DELETE) Associated challenges unique or common to all these concepts when applied experimentally will be detailed along with this study rationale at the conclusion of this chapter.}
