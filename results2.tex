@@ -200,9 +200,9 @@ Once the mount and platform are attached and secured, the sample is left to Refr
 
 \section{Mounted Sample Imaging Characterization}
 
-To quantify and compare the imaging capabilities of the mesoSPIM system to other, more established microscopy methods, a measurement of samples of known dimension and structure would have to be made and recorded using the system. The ability of the system to successfully discern and accurately measure these samples under conditions experienced by tissue samples when mounted inside the system is essential to validate the microscopy techniques used in the imaging pipeline presented here. As such, fluorescent labelled micro-spheres embedded in agarose are utilized to demonstrate the accuracy of the system in recording micron-scale structural targets. This test will also confirm the proper assembly and alignment of the mesoSPIM system  by being able to replicate spatial resolution limits previously reported in other publications using more traditional inner cuvette mounting methods []. These inner cuvette agarose bead samples can also be used to compare the differences in system characterizations between the CLARITY and CUBIC-L/RA protocols as well as serving as a baseline to which alterations to the imaging, mounting protocol can be compared against.
+To quantify and compare the imaging capabilities of the mesoSPIM system to other, more established microscopy methods, a measurement of samples of known dimension and structure would have to be made and recorded using the system. The ability of the system to successfully discern and accurately measure these samples under conditions experienced by tissue samples when mounted inside the system is essential to validate the microscopy techniques used in the imaging pipeline presented here. As such, fluorescent labelled micro-spheres embedded in agarose are utilized to demonstrate the accuracy of the system in recording micron-scale structural targets. This test will also confirm the proper assembly and alignment of the mesoSPIM system  by being able to replicate spatial resolution limits previously reported in other publications using more traditional inner cuvette mounting methods \cite{voigt_mesospim_2019}. These inner cuvette agarose bead samples can also be used to compare the differences in system characterizations between the CLARITY and CUBIC-L/RA protocols as well as serving as a baseline to which alterations to the imaging, mounting protocol can be compared against.
 
-The main alterations to the imaging protocol made in the development of the imaging pipeline were done to de-skew the images captured from oblique positioned sliced samples (see Chapter 2, Section 3.2). Alterations to the imaging and processing protocols will allow samples to be digitally reconstructed to appear as they would have if they were imaged at a non-oblique angle, which is required for proper histological analysis to be performed. The ability of these custom protocols were validated by comparing the control characterization of micro-spheres embedded in agar mounted using a traditional cuvette to those mounted using the custom 3D printed mounts. These custom mounted agarose micro-bead samples were, in turn, characterized with shear and no shear techniques to determine how well mechanical de-skewing protocols are able to replicate non-oblique oriented mounting when processed. 
+The main alterations to the imaging protocol made in the development of the imaging pipeline were done to de-skew the images captured from oblique positioned sliced samples (see chapter 2, Section 3.2). Alterations to the imaging and processing protocols will allow samples to be digitally reconstructed to appear as they would have if they were imaged at a non-oblique angle, which is required for proper histological analysis to be performed. The ability of these custom protocols were validated by comparing the control characterization of micro-spheres embedded in agar mounted using a traditional cuvette to those mounted using the custom 3D printed mounts. These custom mounted agarose micro-bead samples were, in turn, characterized with shear and no shear techniques to determine how well mechanical de-skewing protocols are able to replicate non-oblique oriented mounting when processed. 
 
 
 \subsection{Fluorescent Micro-spheres in 1\% Agarose Sample Fabrication} 
@@ -219,11 +219,11 @@ After stirring the agarose bead solution, a 0.4 $\mu$m diameter syringe is fille
 
 \subsubsection{\textit{Agarose Samples in Internal Cuvettes}}
 
-For 1\% Agarose Solution Bead Samples to be used in the characterization of the mesoSPIM system using a mounted inner cuvette, the same solution protocol that was documented for samples in 3D printed spacers was followed (See section 2.1 of this chapter). Once the beads are mixed into the solution and sufficiently cooled, the solution is poured into 2 rectangular cuvettes: 1 Quartz (Portmann Instruments UQ-205) and 1 Optical Glass (Portmann Instruments UG-205). Using a plastic 1 mL pipette the bottom third to one-half of the cuvette internal volume is filled (approx.. 2-3.5 mL). The solution is left to cool further and gelatinize for 15-20 minutes. 
+For 1\% Agarose Solution Bead Samples to be used in the characterization of the mesoSPIM system using a mounted inner cuvette, the same solution protocol that was documented for samples in 3D printed spacers was followed (See section 2.1 of this chapter). Once the beads are mixed into the solution and sufficiently cooled, the solution is poured into one of two, 7 mL rectangular cuvettes: 1 quartz (Portmann Instruments UQ-205) and 1 optical glass (Portmann Instruments UG-205). Using a plastic 1 mL pipette the bottom third to one-half of the cuvette internal volume is filled (approx.. 2-3.5 mL). The solution is left to cool further and gelatinize for 15-20 minutes. 
 
 After the agarose has set, the cuvette is placed atop a custom designed 3D printed suspension platform. The platform contains a small 1mm deep recess of equal width to the cuvette to ensure secure placement. Once inserted, the remaining internal volume of the optical glass cuvette is filled with CUBIC-RA solution using a plastic pipette and the quartz cuvette is filled with EI solution. Both solutions are added until the meniscus of the solution inside the cuvette is roughly 5mm below the top lip of the cuvette walls (approx. 3.5 mL). 
 
-The custom designed 3D printed mount holder used for left ventricle mounting (see section 1.2 of this chapter) is inserted onto the top of the solution filled cuvette and the remainder of the mounting protocol for this custom mount is followed as previous detailed. The agarose inner cuvette sample proceeds to undergo the inner cuvette imaging protocol previous detailed in chapter 2, section 3. The image stack recorded is set to [INSERT PARAMETERS HERE]. 
+The custom designed 3D printed mount holder used for left ventricle mounting (see section 1.2 of this chapter) is inserted onto the top of the solution filled cuvette and the remainder of the mounting protocol for this custom mount is followed as previous detailed. The agarose inner cuvette sample proceeds to undergo the inner cuvette imaging protocol previous detailed in chapter 2, section 3. The image stack recorded is set to cover a single tile spanning [GET BEAD STACK DIMENSIONS]. 
 
 \subsection{Customized Image Processing For Oblique Imaging}
 
@@ -240,7 +240,7 @@ Python scripts utilized to perform the following oblique image processing techni
  
 \subsubsection{\textit{Sheared Volume Reconstruction}}
 
-A diagram detailing the sheared process of volume reconstruction is shown in Figure 4.6. This sheared method has been previously implemented for use in LSM systems such as OPM and iSPIM and has been modified for use here in the mesoSPIM [SEE PAPER REFS,x2]. 
+A diagram detailing the sheared process of volume reconstruction is shown in Figure 4.6. This sheared method has been previously implemented for use in LSM systems such as OPM and iSPIM and has been modified for use here in the mesoSPIM \cite{wu_inverted_2011, dunsby_optically_2008}. 
 
 \begin{figure}[H]
     \centering
@@ -255,7 +255,7 @@ In this method, as the oblique sample is shifted in z-axis of the system coordin
 
 \subsubsection{\textit{No-Shear Volume Reconstruction}}
 
-A diagram detailing the no shear process of volume reconstruction is shown in Figure 4.6. This no-sheared method was created during the course of this project in collaboration with primary advisor Dr.Caroline Muellbroich and research colleagues Dr. Sharika Mohanan, Dr. Erin Boland, and Mr. Ahmed Elnageh [Cite Publication]. 
+A diagram detailing the no shear process of volume reconstruction is shown in Figure 4.6. This no-sheared method was created during the course of this project in collaboration with primary advisor Dr.Caroline Muellbroich and research colleagues Dr. Sharika Mohanan, Dr. Erin Boland, and Mr. Ahmed Elnageh [CITE OUR PAPER]. 
 
 \begin{figure}[H]
     \centering
@@ -271,7 +271,7 @@ A diagram detailing the no shear process of volume reconstruction is shown in Fi
 
 \subsection{Agarose Bead Sample Characterization Results}
 
-Analysis of all Agarose bead samples utilized point spread analysis programs created and optimized by Mr. Ahmed Elnageh in python script []. Coding scripts are available in [GITHUB URL, folder location]
+Analysis of all Agarose bead samples utilized point spread analysis programs created and optimized by Mr. Ahmed Elnageh in python script [CITE OUR PAPER]. Coding scripts are available in [GITHUB URL, folder location]
 
 \subsubsection{\textit{CLARITY Mount Results}}
 \paragraph{Mounted Inner Cuvette}
@@ -341,7 +341,7 @@ To provide a control data set to compare data obtained using the custom designed
 \end{figure}
 
 
-The average FWHM of the recorded sub-resolution beads in the x,y, and z axes were calculated to be 3.95$\pm$0.8 microns, 5.22$\pm$1.06 microns, and 5.96$\pm$0.75 microns respectively [DOUBLE CHECK]. This data is consistent with previous examinations of spatial resolution of the mesoSPIM using similar mounting techniques[].
+The average FWHM of the recorded sub-resolution beads in the x,y, and z axes were calculated to be 3.95$\pm$0.8 microns, 5.22$\pm$1.06 microns, and 5.96$\pm$0.75 microns respectively [DOUBLE CHECK]. This data is suggests the system has poorer resolution compared to other assembled mesoSPIM systems \cite{voigt_mesospim_2019}. This was expected due to the deactivation of one excitation in the mesoSPIM, difficulties in properly aligning the system, as well as the potential mismatch of the RIMS aqueous solution mediums used which may have not been sufficiently mixed or experienced gradual evaporation of water in the solution over time, altering the RI.
 
 \paragraph{Sheared Vs No Shear}
 Next, the spatial resolution of the mesoSPIM using the new custom made mounts in combination with shear and no shear protocols were recorded and analysed using point spread analysis techniques. Both protocols were performed using 4 separate agarose solution filled mounts to ensure the results acquired using the custom designed mounts are repeatable with minimal differences in achievable resolution between each mount. The results of the no shear recordings were collected and are compared side by side in Figure 4.9 (a-d):
